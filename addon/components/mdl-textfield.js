@@ -14,6 +14,6 @@ export default BaseComponent.extend({
     this.$('label.mdl-button').attr('for', this.get('_inputId'));
   },
   valueChanged: observer('value', function() {
-    this.sendAction();
+    this.sendAction('changed', this.get('value'));
   })
 });
