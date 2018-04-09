@@ -1,5 +1,6 @@
 import BaseComponent from './-base-input-component';
 import layout from '../templates/components/mdl-textfield';
+import { observer } from '@ember/object';
 
 export default BaseComponent.extend({
   pattern: null,
@@ -11,5 +12,8 @@ export default BaseComponent.extend({
   ],
   beforeMdlInit() {
     this.$('label.mdl-button').attr('for', this.get('_inputId'));
-  }
+  },
+  valueChanged: observer('value', function() {
+    this.sendAction();
+  })
 });
