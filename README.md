@@ -32,7 +32,7 @@ This addon can be used without SASS (relying on pure CSS for styles). If you cho
 1. Delete the `ember-cli-sass` NPM dependency that the installation blueprint will add to your app.
 2. Add the following line to your `ember-cli-build.js`.
 ```js
-app.import(app.bowerDirectory + '/material-design-lite/material.css');
+app.import(app.npmDirectory + '/material-design-lite/material.css');
 ```
 
 ## Configuration
@@ -42,7 +42,7 @@ app.import(app.bowerDirectory + '/material-design-lite/material.css');
 
 <img src="http://i59.tinypic.com/ih4lro.png" align="right" />
 
-You can customize the colors of material design elements globally by setting sass variables prior to importing the main styles. 
+You can customize the colors of material design elements globally by setting sass variables prior to importing the main styles.
 
 **app/styles/app.scss**
 ```scss
@@ -56,7 +56,7 @@ $color-accent: $palette-pink-A200;
 
 ## Load Material design icons fontfiles locally
 Adding `http://fonts.googleapis.com/icon?family=Material+Icons` into the `index.html` just works.
-But in few scenarios(like running app offline) you would want to include these icon fonts from the project directories itself. 
+But in few scenarios(like running app offline) you would want to include these icon fonts from the project directories itself.
 To achieve the same, first edit `ember-cli-build.js` to include the following
 
 ```js
@@ -67,11 +67,11 @@ var pickFiles = require('broccoli-static-compiler');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['node_modules/material-design-lite/src']
     }    
   });
 
-  var googleFontFiles = pickFiles('bower_components/material-design-icons/iconfont', {
+  var googleFontFiles = pickFiles('node_modules/material-design-icons/iconfont', {
     srcDir: '/',
     files: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.ttf'],
     destDir: '/fonts'
@@ -108,11 +108,11 @@ var pickFiles = require('broccoli-static-compiler');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['node_modules/material-design-lite/src']
     }    
   });
 
-  var materialSVG = pickFiles('bower_components/material-design-lite/src/images', {
+  var materialSVG = pickFiles('node_modules/material-design-lite/src/images', {
     srcDir: '/',
     files: ['**/*.svg'],
     destDir: '/images'

@@ -9,20 +9,20 @@ module.exports = {
 
     // app.vendorFiles['componentHandlerShim.js'] = 'vendor/componentHandlerShim.js';
     app.import('vendor/componentHandlerShim.js');
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/button/button.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/checkbox/checkbox.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/data-table/data-table.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/icon-toggle/icon-toggle.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/layout/layout.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/menu/menu.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/progress/progress.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/radio/radio.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/ripple/ripple.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/slider/slider.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/spinner/spinner.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/switch/switch.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/tabs/tabs.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/textfield/textfield.js`);
-    app.import(`${app.bowerDirectory  }/material-design-lite/src/tooltip/tooltip.js`);
+    app.import('node_modules/material-design-lite/src/button/button.js');
+    app.import('node_modules/material-design-lite/src/checkbox/checkbox.js');
+    app.import('node_modules/material-design-lite/src/data-table/data-table.js');
+    app.import('node_modules/material-design-lite/src/icon-toggle/icon-toggle.js');
+    app.import('node_modules/material-design-lite/src/layout/layout.js');
+    app.import('node_modules/material-design-lite/src/menu/menu.js');
+    app.import('node_modules/material-design-lite/src/progress/progress.js');
+    app.import('node_modules/material-design-lite/src/radio/radio.js');
+    app.import('node_modules/material-design-lite/src/ripple/ripple.js');
+    app.import('node_modules/material-design-lite/src/slider/slider.js');
+    app.import('node_modules/material-design-lite/src/spinner/spinner.js');
+    app.import('node_modules/material-design-lite/src/switch/switch.js');
+    app.import('node_modules/material-design-lite/src/tabs/tabs.js');
+    app.import('node_modules/material-design-lite/src/textfield/textfield.js');
+    app.import('node_modules/material-design-lite/src/tooltip/tooltip.js');
   }
 };
