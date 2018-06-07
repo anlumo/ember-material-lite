@@ -15,5 +15,13 @@ export default BaseComponent.extend({
   },
   valueChanged: observer('value', function() {
     this.sendAction('changed', this.get('value'));
-  })
+  }),
+  actions: {
+    newline() {
+      let action = this.get('insert-newline');
+      if(action) {
+        return action(...arguments);
+      }
+    },
+  },
 });
