@@ -18,7 +18,7 @@ export default BaseComponent.extend(RippleSupport, ClickActionSupport, {
   _isIconMode: computed('icon', 'isFloating', function() {
     return !this.get('isFloating') && this.get('icon');
   }),
-  attributeBindings: ['disabled', 'for', 'type:buttonType'],
+  attributeBindings: ['disabled', 'for', 'type:buttonType', 'title'],
   buttonType: 'button',
   classNameBindings: [
     'isMiniFab:mdl-button--mini-fab',
