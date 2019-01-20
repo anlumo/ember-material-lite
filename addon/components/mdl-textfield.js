@@ -23,5 +23,17 @@ export default BaseComponent.extend({
         return action(...arguments);
       }
     },
+    focusOut() {
+      let action = this.get('focus-out');
+      if(action) {
+        return action(...arguments);
+      }
+    },
+    focusIn() {
+      let action = this.get('focus-in');
+      if(action) {
+        return action(...arguments);
+      }
+    },
   },
 });
