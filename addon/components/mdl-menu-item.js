@@ -12,6 +12,8 @@ export default BaseChildComponent.extend(ChildComponentSupport, {
   childComponentClassName: 'item',
   click() {
     // eslint-disable-next-line
-    this.action(this);
+    if(this.action) {
+      this.action(this);
+    }
   }
 });

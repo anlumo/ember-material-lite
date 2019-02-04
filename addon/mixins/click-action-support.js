@@ -3,10 +3,16 @@ import Mixin from '@ember/object/mixin';
 
 export default Mixin.create({
   click() {
-    this.action(this);
-    this['on-click'](this);
+    if(this.action) {
+      this.action(this);
+    }
+    if(this['on-click']) {
+      this['on-click'](this);
+    }
   },
   change() {
-    this['on-change'](this);
+    if(this['on-change']) {
+      this['on-change'](this);
+    }
   }
 });
